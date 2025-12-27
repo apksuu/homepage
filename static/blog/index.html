@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>Apks的博客</title>
-    <link rel="stylesheet" href="../css/style.css">  <!-- 引用你主站的CSS -->
-    <link rel="stylesheet" href="../css/root.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apks 的博客</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/root.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 40px 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+        header { text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border-color, #eee); }
+        h1 { font-size: 2.8em; margin: 0; background: linear-gradient(90deg, #ff00ff, #0066ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 1.2em; color: #888; margin-top: 10px; }
+        .post-list { list-style: none; padding: 0; margin: 40px 0; }
+        .post-card { background: var(--card-bg, #ffffff); border-radius: 16px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .post-title a { font-size: 1.8em; font-weight: bold; text-decoration: none; color: inherit; }
+        .post-title a:hover { color: #0066cc; }
+        .post-meta { color: #888; font-size: 0.95em; margin-bottom: 15px; }
+        .post-excerpt { font-size: 1.1em; color: var(--text-color, #333); }
+        .read-more { display: inline-block; margin-top: 15px; color: #0066cc; font-weight: bold; text-decoration: none; }
+        .read-more:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 40px 0; color: #888; font-size: 0.9em; border-top: 1px solid var(--border-color, #eee); }
+        @media (prefers-color-scheme: dark) { :root { --card-bg: #2d2d2d; --border-color: #444; } }
+        @media (max-width: 768px) { h1 { font-size: 2.2em; } .post-card { padding: 20px; } }
+    </style>
 </head>
 <body>
-    <div class="zyyo-main">  <!-- 复用你主站的布局 -->
-        <h1>我的博客文章</h1>
-        <ul class="post-list">
-            <li><a href="../post/my-first-article.html">我的第一篇文章</a> <span>2025.12.27</span></li>
-            <li><a href="../post/second-article.html">第二篇文章</a> <span>2025.12.20</span></li>
-            <!-- 新增文章时，手动在这里添加一行 -->
-        </ul>
-    </div>
+    <header>
+        <h1>Apks 的博客</h1>
+        <p class="subtitle">记录技术、生活与成长 · 初二前端爱好者</p>
+    </header>
+
+    <ul class="post-list">
+        <!-- 新文章会自动在这里添加卡片 -->
+        <li class="post-card">
+            <h2 class="post-title"><a href="../post/my-first-article.html">我的第一篇文章标题</a></h2>
+            <div class="post-meta">发布于 2025.12.27 · 阅读约 3 分钟</div>
+            <div class="post-excerpt">这里写这篇文章的简短摘要，吸引读者点击...</div>
+            <a href="../post/my-first-article.html" class="read-more">阅读全文 →</a>
+        </li>
+
+        <!-- 复制上面这个 li 块添加新文章 -->
+    </ul>
+
+    <footer>
+        © 2025 Apks · Powered by 纯手工 HTML
+        <br><a href="/">返回主页</a>
+    </footer>
 </body>
 </html>
