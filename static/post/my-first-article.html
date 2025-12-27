@@ -1,19 +1,158 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>我的第一篇文章 - Apks博客</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========== 修改这里：文章标题（浏览器标签和页面大标题）========== -->
+    <title>今天的时间 - Apks 的博客</title>
+    
+    <!-- 引用主页的样式，确保颜色、字体、暗黑模式一致 -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/root.css">
+    
+    <style>
+        /* 整体排版：大字体、舒适行距，适合长时间阅读 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            margin: 0 auto;
+            padding: 60px 20px;
+            max-width: 800px;
+            line-height: 2;            /* 行距大，阅读不累 */
+            font-size: 1.2em;
+        }
+        
+        /* 头部：标题居中 */
+        header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color, #eee);
+            margin-bottom: 60px;
+        }
+        
+        /* 主标题样式 */
+        h1 {
+            font-size: 2.4em;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        /* 日期和作者信息 */
+        .date {
+            color: #888;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        
+        /* 正文区域 */
+        .content {
+            white-space: pre-wrap;     /* 自动保留你输入的换行和空格，非常适合纯文字 */
+        }
+        
+        .content p {
+            margin: 30px 0;            /* 段落间距 */
+        }
+        
+        /* 如果想加小标题，直接用 h2（已准备好样式） */
+        .content h2 {
+            font-size: 1.8em;
+            margin: 60px 0 30px;
+            border-left: 5px solid #0066cc;
+            padding-left: 15px;
+        }
+        
+        /* 如果想加图片，用这个样式（图片会居中、圆角、有阴影） */
+        .content img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            display: block;
+        }
+        
+        /* 如果想加代码块，用 pre + code（背景高亮） */
+        .content pre {
+            background: var(--code-bg, #f4f4f4);
+            padding: 20px;
+            border-radius: 12px;
+            overflow: auto;
+            margin: 40px 0;
+        }
+        
+        /* 返回链接 */
+        .back {
+            text-align: center;
+            margin: 80px 0 40px;
+            font-size: 1.1em;
+        }
+        
+        /* 底部版权 */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            color: #888;
+            border-top: 1px solid var(--border-color, #eee);
+        }
+        
+        /* 暗黑模式适配 */
+        @media (prefers-color-scheme: dark) {
+            :root { --border-color: #444; }
+            .content pre { background: #1e1e1e; }
+        }
+        
+        /* 手机端优化 */
+        @media (max-width: 768px) {
+            body { padding: 40px 15px; font-size: 1.15em; }
+            h1 { font-size: 2em; }
+        }
+    </style>
 </head>
 <body>
-    <div class="zyyo-main">
-        <h1>我的第一篇文章</h1>
-        <p>发布日期：2025.12.27</p>
-        <div class="content">
-            <!-- 这里写你的文章内容，支持Markdown转HTML或直接写HTML -->
-            <p>这是文章正文...</p>
-        </div>
-        <a href="../../blog/index.html">返回文章列表</a>
+    <header>
+        <!-- ========== 修改这里：文章主标题 ==========
+        <h1>今天的心情</h1>
+        <!-- ========== 修改这里：发布日期 ==========
+        <div class="date">2025.12.27</div>
+    </header>
+
+    <div class="content">
+        <!-- ========== 从这里开始写正文 ==========
+        
+        <!-- 纯文字写法：直接敲文字，回车换行就会保留（因为用了 pre-wrap） -->
+        今天是2025年12月27日 
+        
+        
+        <!-- 如果想加小标题，直接写 h2（会自动有蓝色边条） -->
+        <!--
+        <h2>今天学到的一个新东西</h2>
+        今天学了 CSS 的 grid 布局，感觉比 flex 更强大，以后可以做更复杂的页面。
+        -->
+        
+        
+        <!-- 如果想加图片，取消下面这行的注释，改成你的图片路径 -->
+        <!--
+        <img src="../../static/img/你的图片.jpg" alt="描述这张图的内容">
+        -->
+        
+        
+        <!-- 如果想加代码，取消下面这行的注释 -->
+        <!--
+        <pre><code>console.log("Apks 的博客上线啦！");
+document.body.style.background = "lightblue";</code></pre>
+        -->
+        
+        
+        <!-- 想写多长就写多长，全部纯文字最舒服～ -->
+        
     </div>
+
+    <div class="back">
+        <a href="../blog/">← 返回博客首页</a>
+    </div>
+
+    <footer>
+        © 2025 Apks
+        <br><a href="/">返回个人主页</a>
+    </footer>
 </body>
 </html>
